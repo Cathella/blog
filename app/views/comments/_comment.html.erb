@@ -8,7 +8,9 @@
     <%= comment.body %>
   </p>
   <p>
-    <%= form.label :status %><br>
-    <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+    <%= link_to "Delete Comment", [comment.article, comment], data: {
+      turbo_method: :delete,
+      turbo_confirm: "Are you sure?"
+    } %>
   </p>
 <% end %>
