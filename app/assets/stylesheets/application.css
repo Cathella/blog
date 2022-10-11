@@ -159,6 +159,10 @@ form select {
   margin-top: 1em;
 }
 
+.margin-top-em {
+  margin-top: 1em;
+}
+
 form input[type='submit'] {
   background: #fee3b8;
   color: #000;
