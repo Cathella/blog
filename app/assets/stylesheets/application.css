@@ -13,16 +13,18 @@
  *= require_tree .
  *= require_self
  */
-/* @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Sen&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Sen:wght@400;700&display=swap');
+
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: 'Sen', sans-serif;
 }
 
 nav {
-  background: #b9b2dc;
+  /* background: #b9b2dc; */
+  background: #a6dae8;
   padding: 2em 5em;
   display: flex;
   justify-content: space-between;
@@ -59,10 +61,12 @@ h6 {
 header {
   text-align: center;
   padding: 7em 2em 4em;
-  background: #b9b2dc;
+  /* background: #b9b2dc; */
+  background: #a6dae8;
 }
 
-h1 {
+h1,
+h2 {
   margin: 0 0 1em 0;
 }
 
@@ -70,10 +74,8 @@ header div {
   margin: 3em 0;
 }
 
-header a {
-  /* background: #000; */
+.join-btn {
   background: #fee3b8;
-  /* color: rgba(255, 255, 255, 0.8); */
   color: #000;
   padding: 15px 30px;
   border-radius: 30px;
@@ -104,9 +106,77 @@ li a {
   color: #000;
 }
 
-.about {
+.about,
+.links {
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.85em;
+}
+
+.links {
+  margin-top: 0.9em;
+}
+
+.story-display {
+  display: flex;
+  justify-content: space-between;
+}
+
+.story-display section {
+  width: 25%;
+}
+
+h3 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+
+form {
+  margin-bottom: 2em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 1em;
+}
+
+form textarea,
+form input[type='text'] {
+  width: 100%;
+  background: #f3f3f4;
+  border-radius: 6px;
+  border: 2px solid #f3f3f4;
+  padding: 0.5em 1em;
+}
+
+form select {
+  background: #f3f3f4;
+  border-radius: 6px;
+  border: none;
+  padding: 0.5em 1em;
+}
+
+form input[type='text'],
+form select {
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+form input[type='submit'] {
+  background: #fee3b8;
+  color: #000;
+  border-radius: 6px;
+  padding: 0.5em 1em;
+  border: none;
+  font-size: 1em;
+}
+
+.comment {
+  margin-bottom: 1.4em;
+  font-size: 0.9em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.flex-item {
+  display: flex;
+  justify-content: space-between;
 }
 
 footer {

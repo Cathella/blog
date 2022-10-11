@@ -1,17 +1,29 @@
-<h1><%= @article.title %></h1>
-<p><%= @article.body %></p>
-<ul>
-  <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li>
-    <%= link_to "Delete", article_path(@article), data: {
-      turbo_method: :delete,
-      turbo_confirm: "Are you sure?"
-    } %>
-  </li>
-</ul>
+<%= render "layouts/nav" %>
+<header>
+  <h2><%= @article.title %></h2>
+  <p>
+    <span class="about">
+      <span>Posted on: <%= @article.created_at %></span> &middot; 20 Reads &middot; <a href="">Youtube link</a>
+    </span>
+  </p>
+  <p class="links">
+    <span>
+      <span><%= link_to "Edit", edit_article_path(@article) %></span> 
+      &middot; 
+      <%= link_to "Delete", article_path(@article), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+      } %>
+    </span>
+  </p>
+</header>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
-
-<h2>Add a comment</h2>
-<%= render "comments/form" %>
+<main class="story-display">
+  <p><%= @article.body %></p>
+  <section>
+    <h3>Leave Feedback</h3>
+    <%= render "comments/form" %>
+    <%= render @article.comments %>
+  </section>
+</main>
+<%= render "layouts/footer" %>
